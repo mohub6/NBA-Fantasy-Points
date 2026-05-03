@@ -32,7 +32,7 @@ Includes:
 
 Fantasy points are computed using a standard weighted formula:
 
-- FP=points+1.2⋅rebounds+1.5⋅assists+2⋅steals+2⋅blocks−0.5⋅turnovers
+- FP= points + 1.2 * rebounds + 1.5 * assists + 2 * steals + 2 * blocks − 0.5 * turnovers
 
 The task is to predict fantasy points for the next game.
 

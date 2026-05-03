@@ -142,8 +142,8 @@ Residual analysis was used to assess model quality:
 
 ## 🚀 Future Improvements
 
-- Hyperparameter tuning (XGBoost / LightGBM)
-- Additional contextual features (opponent strength, pace)
+- Hyperparameter tuning (XGBoost)
+- Additional contextual features (opponent strength, advanced shooting metrics, defensive stats, or player efficiency ratings)
 - Player-level embeddings
 - Advanced time-series models
 

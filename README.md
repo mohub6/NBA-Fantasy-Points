@@ -153,3 +153,56 @@ Residual analysis was used to assess model quality:
 - Scikit-learn
 - XGBoost
 - Matplotlib / Seaborn
+
+
+# Test with FastAPI Endpoint
+
+The trained model is exposed via a FastAPI endpoint.
+
+▶️ Run the API locally
+    uvicorn app.main:app --reload
+
+Then open:
+
+    http://127.0.0.1:8000/docs
+
+This will launch the interactive Swagger UI.
+
+🔹 Endpoint
+POST /predict
+
+Predict fantasy points for the next game based on recent player performance.
+
+✉ Example Request
+
+{  
+  "points_last_3": 27.0,    
+  "points_last_5": 25.3,  
+  "assists_last_3": 6.8,  
+  "assists_last_5": 6.2,  
+  "reboundsTotal_last_3": 8.5,  
+  "reboundsTotal_last_5": 8.1,  
+  "steals_last_3": 1.1,  
+  "steals_last_5": 1.3,  
+  "blocks_last_3": 0.6,  
+  "blocks_last_5": 0.5,  
+  "turnovers_last_3": 2.3,  
+  "turnovers_last_5": 2.1,  
+  "foulsPersonal_last_3": 2.2,  
+  "foulsPersonal_last_5": 2.4,  
+  "numMinutes": 32.0,  
+  "numMinutes_missing": 0,  
+  "rolling_minutes": 31.5,  
+  "player_median_minutes": 30.0,  
+  "home": 1,  
+  "is_playoff": 0,  
+  "fp_per_min_last_5": 1.2  
+}
+
+📡 Example Response: Code = 200
+
+Response body:
+
+{
+  "predicted_fantasy_points": 36.09
+}

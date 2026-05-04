@@ -160,6 +160,7 @@ Residual analysis was used to assess model quality:
 The trained model is exposed via a FastAPI endpoint.
 
 ▶️ Run the API locally
+    
     uvicorn app.main:app --reload
 
 Then open:
@@ -169,7 +170,8 @@ Then open:
 This will launch the interactive Swagger UI.
 
 🔹 Endpoint
-POST /predict
+
+    POST /predict
 
 Predict fantasy points for the next game based on recent player performance.
 
